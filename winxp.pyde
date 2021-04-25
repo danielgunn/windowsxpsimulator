@@ -1,5 +1,3 @@
-
-
 def setup():
     dead = False
     size(640, 480)
@@ -8,11 +6,7 @@ def setup():
     image(img, 0, 0)
             
 def draw():
-    global dead, frame
-    frame += 1
-    frame %= 4
-    if frame == 0:
-        saveFrame("C:\\Users\\lab312\\Documents\\testGIF\\####.png")
+    global dead
     if not dead:
         fill(0xff,0xff,0xff)
         rect(mouseX, mouseY, 50, 40)
@@ -27,7 +21,6 @@ def draw():
         textSize(24)
         fill(0xff,0xff,0xff)
         text(";(\nYour PC is dead\n* press any key to crash again", 20, 40, 500, 500) 
-        
         
 dead = False
 frame = 0
